@@ -4,83 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carify Destek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #111);
+      color: white;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 30px;
-      background: rgba(0,0,0,0.2);
+      padding: 80px 20px 40px;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease-out;
+      font-size: 3.2rem;
+      background: linear-gradient(to right, #00fff0, #ff00c3);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: fadeInDown 1.2s ease-out;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #ccc;
-      animation: fadeIn 2s ease-out;
+      color: #aaa;
+      margin-top: 10px;
     }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 30px 20px;
+    .glass {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 2s ease;
     }
 
-    h2 {
-      color: #00ffe1;
+    .glass h2 {
+      font-size: 1.8rem;
+      color: #00ffe7;
+      margin-bottom: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #00ffe7;
+      color: #000;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #0ff;
+    }
+
+    .faq {
       margin-top: 40px;
     }
 
     .faq-item {
-      margin: 20px 0;
+      margin-bottom: 20px;
+      cursor: pointer;
     }
 
-    .faq-item strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #ffdf6c;
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+      padding: 12px 16px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .faq-item h3:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .faq-item p {
+      display: none;
+      padding: 10px 16px;
+      color: #ccc;
     }
 
     footer {
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    a {
-      color: #7fefff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      color: #777;
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @media (max-width: 600px) {
       header h1 {
         font-size: 2.2rem;
+      }
+
+      .glass {
+        padding: 20px;
       }
     }
   </style>
@@ -89,53 +131,50 @@
 
   <header>
     <h1>🚗 Carify Destek</h1>
-    <p>Aracınız kadar havalı bir destek sayfası.</p>
+    <p>Profesyonel araç fotoğrafları. Hızlı yardım. Net cevaplar.</p>
   </header>
 
-  <div class="container">
-    <h2>📸 Carify Nedir?</h2>
-    <p>
-      Carify, araç fotoğraflarınızı profesyonelce düzenlemenizi sağlar. Arka plan değiştirme, ışık düzeltme ve daha fazlası — hepsi tek uygulamada.
-    </p>
+  <section class="glass">
+    <h2>📲 Carify Nedir?</h2>
+    <p>Carify, araç fotoğraflarınızı profesyonelce düzenlemenizi sağlayan yenilikçi bir mobil uygulamadır. Arka plan değiştirme, ışık iyileştirme ve daha fazlası — hepsi cebinizde.</p>
 
-    <h2>💬 Yardım Al</h2>
-    <p>Bir sorun mu yaşıyorsun? Bize ulaş:</p>
-    <ul>
-      <li>📧 <a href="mailto:accslabteam@gmail.com">accslabteam@gmail.com</a></li>
-      <li>🔐 <a href="https://accs-lab.github.io/Car-Photo-Editor-Privacy/" target="_blank">Gizlilik Politikası</a></li>
-    </ul>
+    <a class="download-btn" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank">App Store’dan İndirin</a>
 
-    <h2>❓ Sıkça Sorulan Sorular</h2>
+    <div class="faq">
+      <h2>❓ Sıkça Sorulanlar</h2>
 
-    <div class="faq-item">
-      <strong>📂 Fotoğraflarıma nasıl erişim izni veririm?</strong>
-      Uygulama açıldığında gerekli izinleri verin. Kaçırdıysanız, ayarlardan Carify’a erişim izni verebilirsiniz.
+      <div class="faq-item">
+        <h3>📂 Fotoğraflara erişim izni vermedim, ne yapmalıyım?</h3>
+        <p>Ayarlar > Uygulamalar > Carify > İzinler yolunu takip ederek tekrar erişim izni verebilirsiniz.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>🖼️ Arka plan değiştirme nasıl çalışıyor?</h3>
+        <p>Fotoğrafınızı seçin, ardından “Arka Plan Değiştir” seçeneğiyle hazır sahnelerden birini kullanın ya da kendi görselinizi yükleyin.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>📧 Uygulamayla ilgili sorun bildirimi nasıl yapılır?</h3>
+        <p>Bize <a href="mailto:accslabteam@gmail.com">accslabteam@gmail.com</a> adresinden ulaşabilirsiniz.</p>
+      </div>
     </div>
-
-    <div class="faq-item">
-      <strong>🖼️ Arka plan nasıl değiştirilir?</strong>
-      Fotoğraf seçin ve "Arka Plan Değiştir"e dokunun. Hazır stillerden birini seçin veya kendi görselinizi yükleyin.
-    </div>
-
-    <div class="faq-item">
-      <strong>🚫 Uygulama yanıt vermiyor, ne yapmalıyım?</strong>
-      Uygulamayı kapatıp tekrar başlatın. Sorun devam ederse bize ulaşın.
-    </div>
-
-    <h2>🛠️ Sürüm Notları</h2>
-    <ul>
-      <li><strong>v1.0.0</strong> – İlk sürüm, arka plan değiştirme ve fotoğraf düzenleme özellikleri</li>
-    </ul>
-
-    <h2>📢 Geri Bildirim</h2>
-    <p>
-      Deneyimin nasıl geçti? Fikirlerini bizimle paylaş: <a href="mailto:accslabteam@gmail.com">accslabteam@gmail.com</a>
-    </p>
-  </div>
+  </section>
 
   <footer>
-    © 2025 Carify • Tüm hakları saklıdır
+    © 2025 Carify • Geliştirici: Ahmet Salih Yalçın • <a href="https://accs-lab.github.io/Car-Photo-Editor-Privacy/" target="_blank">Gizlilik Politikası</a>
   </footer>
+
+  <script>
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const p = item.querySelector('p');
+        const isVisible = p.style.display === 'block';
+        document.querySelectorAll('.faq-item p').forEach(el => el.style.display = 'none');
+        p.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+  </script>
 
 </body>
 </html>
